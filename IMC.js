@@ -1,14 +1,18 @@
-let peso, altura, imc, alturaMetros
+let peso, altura, imc, alturaMetros, nome
 
+nome = prompt("Digite seu nome: ")
 peso = prompt("Escreva qual o seu peso em KG: ")
 altura = prompt("Escreva qual a sua altura em cm: ")
 alturaMetros = altura/100
 
 imc = peso/(alturaMetros*alturaMetros)
 
-console.log(`Seu IMC é ${imc.toFixed(2)}`)
+console.log(`Seu nome é ${nome} e o seu IMC é ${imc.toFixed(2)}`)
 
 switch (true) {
+    case imc < 16:
+        console.log(`Muito abaixo do peso grave`)
+        break;
     case imc <= 16.9:
         console.log(`Muito abaixo do peso.`)
         break;
